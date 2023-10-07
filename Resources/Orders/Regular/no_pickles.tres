@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Order" load_steps=7 format=3 uid="uid://bj74f2udvv0sv"]
+
+[ext_resource type="PackedScene" uid="uid://76ptoqyr8sy8" path="res://Scenes/Ingredients/Breads/bread.tscn" id="1_h7bb2"]
+[ext_resource type="Script" path="res://Scripts/CustomerOrder.gd" id="1_ivklg"]
+[ext_resource type="Script" path="res://Scripts/OrderItem.gd" id="2_80xny"]
+[ext_resource type="PackedScene" uid="uid://c4iy1acmkduo2" path="res://Scenes/Ingredients/Meats/patty.tscn" id="3_35wr2"]
+
+[sub_resource type="Resource" id="Resource_68g76"]
+script = ExtResource("2_80xny")
+Item = ExtResource("1_h7bb2")
+Amount = 2
+
+[sub_resource type="Resource" id="Resource_nrnry"]
+script = ExtResource("2_80xny")
+Item = ExtResource("3_35wr2")
+Amount = 1
+
+[resource]
+script = ExtResource("1_ivklg")
+order = Array[ExtResource("2_80xny")]([SubResource("Resource_68g76"), SubResource("Resource_nrnry")])
+difficulty = 0

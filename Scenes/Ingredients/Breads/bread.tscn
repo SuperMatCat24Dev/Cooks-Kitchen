@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://76ptoqyr8sy8"]
+
+[ext_resource type="PackedScene" uid="uid://cmf6sy5tml3wb" path="res://Scenes/Ingredients/ingredient_base.tscn" id="1_0bmdo"]
+[ext_resource type="Texture2D" uid="uid://dq6jh6k2wuv5f" path="res://assets/bread.png" id="2_frfww"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_suw5t"]
+friction = 0.75
+bounce = 0.35
+
+[node name="Bread" groups=["Topper"] instance=ExtResource("1_0bmdo")]
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_suw5t")
+gravity_scale = 0.85
+sprite = ExtResource("2_frfww")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="0"]
+scale = Vector2(15.4, 12.7)
+
+[node name="Bread2" type="Sprite2D" parent="." index="1"]
+position = Vector2(-0.8125, -50)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_frfww")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+position = Vector2(0, -48)
+polygon = PackedVector2Array(-145, 18, -74, 41, 87, 40, 131, 24, 162, -22, 138, -24, 0, -15, -95, -19, -161, -25)

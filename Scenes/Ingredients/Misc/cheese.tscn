@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b56y48fg58w6l"]
+
+[ext_resource type="PackedScene" uid="uid://cmf6sy5tml3wb" path="res://Scenes/Ingredients/ingredient_base.tscn" id="1_1q1d8"]
+[ext_resource type="Texture2D" uid="uid://dhwv23scxdns6" path="res://assets/cheeseslice.png" id="2_8sx1l"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yak2w"]
+friction = 0.51
+bounce = 0.08
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhr5i"]
+size = Vector2(355, 13)
+
+[node name="Cheese" instance=ExtResource("1_1q1d8")]
+mass = 0.04
+physics_material_override = SubResource("PhysicsMaterial_yak2w")
+gravity_scale = 0.9
+sprite = ExtResource("2_8sx1l")
+
+[node name="Picklesliced" type="Sprite2D" parent="." index="1"]
+position = Vector2(-3.38813e-21, -2)
+scale = Vector2(0.75, 0.769)
+texture = ExtResource("2_8sx1l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(0.5, 5.5)
+shape = SubResource("RectangleShape2D_fhr5i")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://3228r8ykdfr2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kn8n2"]
+font_size = 48
+
+[node name="OrderDisplay" type="HBoxContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Texture" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Amount" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "x1"
+label_settings = SubResource("LabelSettings_kn8n2")
+horizontal_alignment = 1
+vertical_alignment = 1

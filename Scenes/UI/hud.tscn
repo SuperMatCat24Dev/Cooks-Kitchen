@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://5ltjphv7pp6p"]
+
+[ext_resource type="Script" path="res://Scenes/UI/hud.gd" id="1_x7eud"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l3ahd"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_qyjg4"]
+font_size = 40
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_x7eud")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 153.0
+grow_horizontal = 2
+
+[node name="Time" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "00:00"
+label_settings = SubResource("LabelSettings_l3ahd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "1000"
+label_settings = SubResource("LabelSettings_qyjg4")
+horizontal_alignment = 1
+vertical_alignment = 1

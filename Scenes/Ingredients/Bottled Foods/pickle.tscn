@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp3vdv8nyonrw"]
+
+[ext_resource type="PackedScene" uid="uid://cmf6sy5tml3wb" path="res://Scenes/Ingredients/ingredient_base.tscn" id="1_geicf"]
+[ext_resource type="Texture2D" uid="uid://du5lap7boqa1j" path="res://assets/picklesliced.png" id="3_758jy"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yak2w"]
+friction = 0.51
+bounce = 0.27
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhr5i"]
+size = Vector2(86, 13)
+
+[node name="Pickle" instance=ExtResource("1_geicf")]
+mass = 0.02
+physics_material_override = SubResource("PhysicsMaterial_yak2w")
+sprite = ExtResource("3_758jy")
+
+[node name="Picklesliced" type="Sprite2D" parent="." index="1"]
+position = Vector2(0, -2)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_758jy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_fhr5i")

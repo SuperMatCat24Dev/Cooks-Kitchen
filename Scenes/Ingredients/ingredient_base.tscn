@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmf6sy5tml3wb"]
+
+[ext_resource type="Script" path="res://Scenes/Ingredients/ingredient_base.gd" id="1_807hd"]
+
+[node name="Ingredient_Base" type="RigidBody2D"]
+inertia = 1000.0
+script = ExtResource("1_807hd")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(3.4, 3.5)

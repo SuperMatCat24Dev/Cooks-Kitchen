@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://drfqeomrl8ita"]
+
+[ext_resource type="Texture2D" uid="uid://cpk5coy5wdg04" path="res://icon.svg" id="1_olvrf"]
+[ext_resource type="Script" path="res://Scenes/Ingredients/ingredient_button.gd" id="2_vj3tg"]
+
+[node name="IngredientButton" type="TextureButton"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_olvrf")
+stretch_mode = 5
+script = ExtResource("2_vj3tg")

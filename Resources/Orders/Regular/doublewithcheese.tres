@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Order" load_steps=11 format=3 uid="uid://pgvtdb8d6lvk"]
+
+[ext_resource type="PackedScene" uid="uid://76ptoqyr8sy8" path="res://Scenes/Ingredients/Breads/bread.tscn" id="1_28uvq"]
+[ext_resource type="Script" path="res://Scripts/OrderItem.gd" id="2_0b75h"]
+[ext_resource type="PackedScene" uid="uid://c4iy1acmkduo2" path="res://Scenes/Ingredients/Meats/patty.tscn" id="3_s1f0j"]
+[ext_resource type="PackedScene" uid="uid://bp3vdv8nyonrw" path="res://Scenes/Ingredients/Bottled Foods/pickle.tscn" id="4_g3hlo"]
+[ext_resource type="PackedScene" uid="uid://b56y48fg58w6l" path="res://Scenes/Ingredients/Misc/cheese.tscn" id="5_5k7jo"]
+[ext_resource type="Script" path="res://Scripts/CustomerOrder.gd" id="5_qfrf8"]
+
+[sub_resource type="Resource" id="Resource_3ab55"]
+script = ExtResource("2_0b75h")
+Item = ExtResource("1_28uvq")
+Amount = 3
+
+[sub_resource type="Resource" id="Resource_wfx78"]
+script = ExtResource("2_0b75h")
+Item = ExtResource("3_s1f0j")
+Amount = 2
+
+[sub_resource type="Resource" id="Resource_oot0c"]
+script = ExtResource("2_0b75h")
+Item = ExtResource("4_g3hlo")
+Amount = 5
+
+[sub_resource type="Resource" id="Resource_1tsh3"]
+script = ExtResource("2_0b75h")
+Item = ExtResource("5_5k7jo")
+Amount = 2
+
+[resource]
+script = ExtResource("5_qfrf8")
+order = Array[ExtResource("2_0b75h")]([SubResource("Resource_3ab55"), SubResource("Resource_wfx78"), SubResource("Resource_oot0c"), SubResource("Resource_1tsh3")])
+difficulty = 12

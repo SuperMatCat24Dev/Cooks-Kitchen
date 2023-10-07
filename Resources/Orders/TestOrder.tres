@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Order" load_steps=2 format=3 uid="uid://bvhoqd07pc0fb"]
+
+[ext_resource type="Script" path="res://Scripts/CustomerOrder.gd" id="1_jmwdt"]
+
+[resource]
+script = ExtResource("1_jmwdt")
+order = Array[Resource("res://Scripts/OrderItem.gd")]([])
+difficulty = 0.0

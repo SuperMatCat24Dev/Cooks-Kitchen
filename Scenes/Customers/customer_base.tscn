@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1c3poq2w6dec"]
+
+[ext_resource type="Script" path="res://Scenes/Customers/customer_base.gd" id="1_0w4vu"]
+[ext_resource type="Texture2D" uid="uid://bnjpdssk1fnc4" path="res://assets/Fingore.png" id="2_ma4cv"]
+[ext_resource type="Texture2D" uid="uid://dmfyyhyuew5lq" path="res://assets/Scipulous_left.png" id="3_08maw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tqnv7"]
+font_size = 48
+
+[node name="CustomerBase" type="Node2D"]
+script = ExtResource("1_0w4vu")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -85.0
+offset_top = -613.0
+offset_right = 495.0
+offset_bottom = -27.0
+mouse_filter = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Legs" type="Sprite2D" parent="."]
+position = Vector2(239, 353)
+rotation = 1.5708
+scale = Vector2(-0.158, 0.125)
+texture = ExtResource("2_ma4cv")
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(240, 179)
+rotation = 1.5708
+scale = Vector2(0.158041, 0.155663)
+texture = ExtResource("2_ma4cv")
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(211, 98)
+scale = Vector2(0.13475, 0.13475)
+texture = ExtResource("3_08maw")
+
+[node name="Happiness" type="Label" parent="."]
+offset_left = -45.0
+offset_right = 90.0
+offset_bottom = 70.0
+text = "0"
+label_settings = SubResource("LabelSettings_tqnv7")
+horizontal_alignment = 1
+vertical_alignment = 1
