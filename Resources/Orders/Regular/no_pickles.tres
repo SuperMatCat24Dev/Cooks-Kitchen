@@ -18,4 +18,4 @@ Amount = 1
 [resource]
 script = ExtResource("1_ivklg")
 order = Array[ExtResource("2_80xny")]([SubResource("Resource_68g76"), SubResource("Resource_nrnry")])
-difficulty = 0
+difficulty = 0.0

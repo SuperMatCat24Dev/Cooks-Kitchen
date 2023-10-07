@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Order" load_steps=9 format=3 uid="uid://cccnajkbp6qm6"]
+
+[ext_resource type="PackedScene" uid="uid://76ptoqyr8sy8" path="res://Scenes/Ingredients/Breads/bread.tscn" id="1_ce8nc"]
+[ext_resource type="Script" path="res://Scripts/OrderItem.gd" id="2_njbko"]
+[ext_resource type="PackedScene" uid="uid://c4iy1acmkduo2" path="res://Scenes/Ingredients/Meats/patty.tscn" id="3_mgwuw"]
+[ext_resource type="PackedScene" uid="uid://c714ndqc4f5k2" path="res://Scenes/Ingredients/Meats/bacon.tscn" id="4_h175s"]
+[ext_resource type="Script" path="res://Scripts/CustomerOrder.gd" id="6_eesb2"]
+
+[sub_resource type="Resource" id="Resource_3ab55"]
+script = ExtResource("2_njbko")
+Item = ExtResource("1_ce8nc")
+Amount = 2
+
+[sub_resource type="Resource" id="Resource_wfx78"]
+script = ExtResource("2_njbko")
+Item = ExtResource("3_mgwuw")
+Amount = 2
+
+[sub_resource type="Resource" id="Resource_3rebb"]
+script = ExtResource("2_njbko")
+Item = ExtResource("4_h175s")
+Amount = 3
+
+[resource]
+script = ExtResource("6_eesb2")
+order = Array[ExtResource("2_njbko")]([SubResource("Resource_3ab55"), SubResource("Resource_wfx78"), SubResource("Resource_3rebb")])
+difficulty = 8.0
