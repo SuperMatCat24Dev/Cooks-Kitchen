@@ -19,7 +19,7 @@ Amount = 1
 [sub_resource type="Resource" id="Resource_4d2l3"]
 script = ExtResource("2_qwjq2")
 Item = ExtResource("4_kte08")
-Amount = 10
+Amount = 7
 
 [resource]
 script = ExtResource("5_pvlon")
