@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://culjom4oltkml"]
+[gd_scene load_steps=20 format=3 uid="uid://culjom4oltkml"]
 
 [ext_resource type="Script" path="res://Scenes/Ingredients/ingredient_button.gd" id="1_mnefv"]
 [ext_resource type="Script" path="res://Scenes/UI/IngredientSpawner.gd" id="1_u31ee"]
@@ -13,7 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://dhwv23scxdns6" path="res://assets/cheeseslice.png" id="10_wa2ec"]
 [ext_resource type="PackedScene" uid="uid://b56y48fg58w6l" path="res://Scenes/Ingredients/Misc/cheese.tscn" id="11_nxgrc"]
 [ext_resource type="Texture2D" uid="uid://cpk5coy5wdg04" path="res://icon.svg" id="12_jsppy"]
+[ext_resource type="Texture2D" uid="uid://b6i2erjhl6wg3" path="res://assets/bacon.png" id="12_rg0vb"]
 [ext_resource type="Texture2D" uid="uid://dy5wm1qx7m77g" path="res://Logo.png" id="13_3a4nb"]
+[ext_resource type="PackedScene" uid="uid://c714ndqc4f5k2" path="res://Scenes/Ingredients/Meats/bacon.tscn" id="13_qw1y1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bif34"]
 friction = 0.68
@@ -82,6 +84,17 @@ ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("1_mnefv")
 ingredient = ExtResource("11_nxgrc")
+
+[node name="IngredientButton5" type="TextureButton" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("12_rg0vb")
+texture_pressed = ExtResource("3_5hmfp")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("1_mnefv")
+ingredient = ExtResource("13_qw1y1")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
 position = Vector2(32, 635)

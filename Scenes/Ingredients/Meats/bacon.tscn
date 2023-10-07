@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c714ndqc4f5k2"]
+
+[ext_resource type="PackedScene" uid="uid://cmf6sy5tml3wb" path="res://Scenes/Ingredients/ingredient_base.tscn" id="1_6i1hy"]
+[ext_resource type="Texture2D" uid="uid://b6i2erjhl6wg3" path="res://assets/bacon.png" id="2_sjq4u"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5jvje"]
+friction = 0.91
+bounce = 0.15
+
+[node name="Patty" instance=ExtResource("1_6i1hy")]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_5jvje")
+gravity_scale = 0.9
+sprite = ExtResource("2_sjq4u")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="0"]
+position = Vector2(-23, 0)
+scale = Vector2(18, 18.1)
+
+[node name="Patty2" type="Sprite2D" parent="." index="1"]
+position = Vector2(-24, 3)
+scale = Vector2(0.65, 0.349)
+texture = ExtResource("2_sjq4u")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+polygon = PackedVector2Array(-132, 5, -59, 14, 21, 6, 113, 15, 144, 9, 134, 1, 99, 3, 17, -5, -58, 3, -138, -7, -177, -2, -184, 5, -175, 10)
