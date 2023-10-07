@@ -26,15 +26,32 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Legs" type="Sprite2D" parent="."]
+modulate = Color(1, 0.729412, 0.733333, 1)
 position = Vector2(239, 353)
 rotation = 1.5708
 scale = Vector2(-0.158, 0.125)
 texture = ExtResource("2_ma4cv")
 
 [node name="Body" type="Sprite2D" parent="."]
+modulate = Color(0.729412, 0.8, 1, 1)
 position = Vector2(240, 179)
 rotation = 1.5708
 scale = Vector2(0.158041, 0.155663)
+texture = ExtResource("2_ma4cv")
+
+[node name="Body2" type="Sprite2D" parent="Body"]
+modulate = Color(0.729412, 0.8, 1, 1)
+z_index = -1
+position = Vector2(429.526, 413.15)
+rotation = 3.49329
+scale = Vector2(0.739172, 0.793732)
+texture = ExtResource("2_ma4cv")
+
+[node name="Body3" type="Sprite2D" parent="Body"]
+modulate = Color(0.729412, 0.8, 1, 1)
+position = Vector2(564.431, -85.6379)
+rotation = 3.49329
+scale = Vector2(0.79132, 0.793732)
 texture = ExtResource("2_ma4cv")
 
 [node name="Head" type="Sprite2D" parent="."]
