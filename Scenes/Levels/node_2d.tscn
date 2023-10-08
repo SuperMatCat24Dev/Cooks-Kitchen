@@ -128,4 +128,4 @@ position = Vector2(389, 542.5)
 shape = SubResource("RectangleShape2D_qf8ei")
 
 [node name="CustomerBase" parent="." instance=ExtResource("9_hpl5e")]
-position = Vector2(1314, 609)
+position = Vector2(1373, 654)

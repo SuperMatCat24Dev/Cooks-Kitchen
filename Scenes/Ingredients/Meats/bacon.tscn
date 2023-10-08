@@ -14,7 +14,7 @@ gravity_scale = 0.9
 sprite = ExtResource("2_sjq4u")
 
 [node name="VisibleOnScreenNotifier2D" parent="." index="0"]
-position = Vector2(-23, 0)
+position = Vector2(-25, 0)
 scale = Vector2(18, 18.1)
 
 [node name="Patty2" type="Sprite2D" parent="." index="1"]
@@ -24,4 +24,4 @@ texture = ExtResource("2_sjq4u")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
 position = Vector2(0, 1)
-polygon = PackedVector2Array(-131, 6, -58, 17, 18, 5, 113, 18, 144, 9, 131, -3, 97, 1, 17, -9, -59, -1, -132, -10, -176, -5, -184, 5, -174, 12)
+polygon = PackedVector2Array(-131, 4, -58, 13, 18, 5, 95, 14, 137, 10, 131, -1, 97, 1, 17, -7, -58, 1, -130, -8, -173, -4, -183, 2, -175, 9)
