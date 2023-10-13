@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4nm1mgh2anuo"]
+
+[ext_resource type="PackedScene" uid="uid://cuk1qoh08ppbr" path="res://Scenes/Enviroment Objects/cook_area_base.tscn" id="1_k5226"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyyxk"]
+size = Vector2(294, 55)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bcqh3"]
+radius = 35.0
+height = 298.0
+
+[node name="CookAreaBase" instance=ExtResource("1_k5226")]
+
+[node name="Polygon2D" parent="." index="0"]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-156, -7, -47, -50, 84, -49, 167, 5, 164, 67, -171, 67)
+
+[node name="Polygon2D2" parent="." index="1"]
+position = Vector2(0, 39.5)
+shape = SubResource("RectangleShape2D_gyyxk")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-2, -9)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_bcqh3")

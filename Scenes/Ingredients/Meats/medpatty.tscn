@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0tnee5c44jg1"]
+
+[ext_resource type="PackedScene" uid="uid://cmf6sy5tml3wb" path="res://Scenes/Ingredients/ingredient_base.tscn" id="1_41624"]
+[ext_resource type="Texture2D" uid="uid://bp8tpmnsc7j20" path="res://assets/patty_med.png" id="2_hbvq6"]
+[ext_resource type="PackedScene" uid="uid://bxqdw3ntry21i" path="res://Scenes/Ingredients/Meats/medwellpatty.tscn" id="3_7xqeu"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5jvje"]
+bounce = 0.14
+absorbent = true
+
+[node name="Patty" instance=ExtResource("1_41624")]
+mass = 0.4
+physics_material_override = SubResource("PhysicsMaterial_5jvje")
+gravity_scale = 0.95
+sprite = ExtResource("2_hbvq6")
+cook_time = 7.0
+cook_result = ExtResource("3_7xqeu")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="0"]
+scale = Vector2(16.7, 18.1)
+
+[node name="Patty2" type="Sprite2D" parent="." index="1"]
+position = Vector2(-5.00001, 4)
+scale = Vector2(0.77, 0.413)
+texture = ExtResource("2_hbvq6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+polygon = PackedVector2Array(-113, 30, 129, 29, 166, 15, 162, -9, 129, -18, 0, -13, -142, -18, -173, -7, -176, 13)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuk1qoh08ppbr"]
+
+[ext_resource type="Script" path="res://Scenes/Enviroment Objects/cook_area_base.gd" id="1_mh83m"]
+
+[node name="CookAreaBase" type="StaticBody2D" groups=["CookArea"]]
+script = ExtResource("1_mh83m")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+
+[node name="Polygon2D2" type="CollisionShape2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

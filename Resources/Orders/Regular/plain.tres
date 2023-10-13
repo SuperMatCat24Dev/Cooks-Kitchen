@@ -1,27 +1,21 @@
-[gd_resource type="Resource" script_class="Order" load_steps=9 format=3 uid="uid://bqinjlq7jvdlv"]
+[gd_resource type="Resource" script_class="Order" load_steps=7 format=3 uid="uid://cx6xb1wimqyxx"]
 
-[ext_resource type="PackedScene" uid="uid://76ptoqyr8sy8" path="res://Scenes/Ingredients/Breads/bread.tscn" id="1_cb86o"]
-[ext_resource type="Script" path="res://Scripts/OrderItem.gd" id="2_11wxo"]
-[ext_resource type="PackedScene" uid="uid://c4iy1acmkduo2" path="res://Scenes/Ingredients/Meats/patty.tscn" id="3_5cgr6"]
-[ext_resource type="PackedScene" uid="uid://bp3vdv8nyonrw" path="res://Scenes/Ingredients/Bottled Foods/pickle.tscn" id="4_ttjj7"]
-[ext_resource type="Script" path="res://Scripts/CustomerOrder.gd" id="5_kitqs"]
+[ext_resource type="PackedScene" uid="uid://di6enogj7lx5y" path="res://Scenes/Ingredients/Breads/bread.tscn" id="1_6dhjx"]
+[ext_resource type="Script" path="res://Scripts/CustomerOrder.gd" id="1_syjqj"]
+[ext_resource type="Script" path="res://Scripts/OrderItem.gd" id="2_r7ret"]
+[ext_resource type="PackedScene" uid="uid://c4iy1acmkduo2" path="res://Scenes/Ingredients/Meats/rawpatty.tscn" id="3_o6y4n"]
 
-[sub_resource type="Resource" id="Resource_55ogh"]
-script = ExtResource("2_11wxo")
-Item = ExtResource("1_cb86o")
+[sub_resource type="Resource" id="Resource_kk5d2"]
+script = ExtResource("2_r7ret")
+Item = ExtResource("1_6dhjx")
 Amount = 2
 
-[sub_resource type="Resource" id="Resource_jjda4"]
-script = ExtResource("2_11wxo")
-Item = ExtResource("3_5cgr6")
+[sub_resource type="Resource" id="Resource_j3c60"]
+script = ExtResource("2_r7ret")
+Item = ExtResource("3_o6y4n")
 Amount = 1
 
-[sub_resource type="Resource" id="Resource_4d2l3"]
-script = ExtResource("2_11wxo")
-Item = ExtResource("4_ttjj7")
-Amount = 5
-
 [resource]
-script = ExtResource("5_kitqs")
-order = Array[ExtResource("2_11wxo")]([SubResource("Resource_55ogh"), SubResource("Resource_jjda4"), SubResource("Resource_4d2l3")])
-difficulty = 2
+script = ExtResource("1_syjqj")
+order = Array[ExtResource("2_r7ret")]([SubResource("Resource_kk5d2"), SubResource("Resource_j3c60")])
+difficulty = 0.0
