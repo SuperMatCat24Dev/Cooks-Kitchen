@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://culjom4oltkml"]
+[gd_scene load_steps=20 format=3 uid="uid://culjom4oltkml"]
 
 [ext_resource type="Script" path="res://Scenes/UI/IngredientSpawner.gd" id="1_bit8x"]
 [ext_resource type="Texture2D" uid="uid://dq6jh6k2wuv5f" path="res://assets/bread.png" id="2_2xou3"]
@@ -11,10 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://bp3vdv8nyonrw" path="res://Scenes/Ingredients/Bottled Foods/pickle.tscn" id="9_ldvd6"]
 [ext_resource type="Texture2D" uid="uid://dhwv23scxdns6" path="res://assets/cheeseslice.png" id="10_he721"]
 [ext_resource type="PackedScene" uid="uid://b56y48fg58w6l" path="res://Scenes/Ingredients/Misc/cheese.tscn" id="11_tmq0i"]
-[ext_resource type="Texture2D" uid="uid://b6i2erjhl6wg3" path="res://assets/bacon.png" id="12_p0kxk"]
-[ext_resource type="PackedScene" uid="uid://c714ndqc4f5k2" path="res://Scenes/Ingredients/Meats/bacon.tscn" id="13_nxsmd"]
-[ext_resource type="Texture2D" uid="uid://cpk5coy5wdg04" path="res://icon.svg" id="14_87q24"]
-[ext_resource type="Texture2D" uid="uid://dy5wm1qx7m77g" path="res://Logo.png" id="15_k2gl5"]
+[ext_resource type="Texture2D" uid="uid://bfxsgo3fyynwl" path="res://assets/rawbacon.png" id="12_edyh3"]
+[ext_resource type="PackedScene" uid="uid://cdfmd5nc4cx5w" path="res://Scenes/Ingredients/Meats/rawbacon.tscn" id="13_5n2ir"]
+[ext_resource type="Script" path="res://Scenes/UI/RoomCamera.gd" id="16_oki27"]
 [ext_resource type="PackedScene" uid="uid://d1c3poq2w6dec" path="res://Scenes/Customers/customer_base.tscn" id="16_ypdod"]
 [ext_resource type="PackedScene" uid="uid://d4nm1mgh2anuo" path="res://Scenes/Enviroment Objects/hob.tscn" id="17_b6oqa"]
 
@@ -36,7 +35,10 @@ anchors_preset = -1
 anchor_top = 0.797
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 0.239929
+offset_left = -963.0
+offset_top = -546.76
+offset_right = -963.0
+offset_bottom = -547.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 3
@@ -90,33 +92,15 @@ ingredient = ExtResource("11_tmq0i")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("12_p0kxk")
+texture_normal = ExtResource("12_edyh3")
 texture_pressed = ExtResource("3_xyamk")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("4_jfuoq")
-ingredient = ExtResource("13_nxsmd")
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(32, 635)
-scale = Vector2(1.6875, 1.75)
-texture_normal = ExtResource("14_87q24")
-texture_pressed = ExtResource("15_k2gl5")
-passby_press = true
-action = "left"
-visibility_mode = 1
-
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(1659, 625)
-scale = Vector2(1.8125, 1.8125)
-texture_normal = ExtResource("14_87q24")
-texture_pressed = ExtResource("15_k2gl5")
-passby_press = true
-action = "right"
-visibility_mode = 1
+ingredient = ExtResource("13_5n2ir")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(586, 424)
+position = Vector2(-377, -123)
 physics_material_override = SubResource("PhysicsMaterial_bif34")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
@@ -129,8 +113,18 @@ position = Vector2(389, 542.5)
 shape = SubResource("RectangleShape2D_qf8ei")
 
 [node name="CustomerBase" parent="." instance=ExtResource("16_ypdod")]
-position = Vector2(1373, 654)
+position = Vector2(410, 107)
 
 [node name="CookAreaBase" parent="." instance=ExtResource("17_b6oqa")]
-position = Vector2(255, 491)
+position = Vector2(-776, 89)
 script = null
+
+[node name="CookAreaBase2" parent="." instance=ExtResource("17_b6oqa")]
+position = Vector2(-432, 89)
+script = null
+
+[node name="RoomCamera" type="Node2D" parent="."]
+script = ExtResource("16_oki27")
+
+[node name="Camera2D" type="Camera2D" parent="RoomCamera"]
+position_smoothing_enabled = true

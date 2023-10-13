@@ -2,15 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-path="res://.godot/imported/patty.png-aa2588e2f17bc2ea722691fda9af7f66.ctex"
+uid="uid://x83ppxfqk1uc"
+path="res://.godot/imported/ash.png-e8e86c7f5c671bc2b3922a238c150f00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/patty.png"
-dest_files=["res://.godot/imported/patty.png-aa2588e2f17bc2ea722691fda9af7f66.ctex"]
+source_file="res://assets/ash.png"
+dest_files=["res://.godot/imported/ash.png-e8e86c7f5c671bc2b3922a238c150f00.ctex"]
 
 [params]
 

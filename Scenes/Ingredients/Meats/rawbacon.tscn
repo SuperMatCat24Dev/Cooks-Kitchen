@@ -1,20 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://c714ndqc4f5k2"]
+[gd_scene load_steps=5 format=3 uid="uid://cdfmd5nc4cx5w"]
 
-[ext_resource type="PackedScene" uid="uid://cmf6sy5tml3wb" path="res://Scenes/Ingredients/ingredient_base.tscn" id="1_6i1hy"]
-[ext_resource type="Texture2D" uid="uid://b6i2erjhl6wg3" path="res://assets/bacon.png" id="2_sjq4u"]
-[ext_resource type="PackedScene" uid="uid://d2y2mtguyu3c1" path="res://Scenes/Ingredients/Misc/ash.tscn" id="3_1y77q"]
+[ext_resource type="PackedScene" uid="uid://cmf6sy5tml3wb" path="res://Scenes/Ingredients/ingredient_base.tscn" id="1_gmbnj"]
+[ext_resource type="Texture2D" uid="uid://bfxsgo3fyynwl" path="res://assets/rawbacon.png" id="2_uk3f8"]
+[ext_resource type="PackedScene" uid="uid://c714ndqc4f5k2" path="res://Scenes/Ingredients/Meats/bacon.tscn" id="3_x0fij"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5jvje"]
 friction = 0.91
 bounce = 0.15
 
-[node name="Patty" instance=ExtResource("1_6i1hy")]
+[node name="Patty" instance=ExtResource("1_gmbnj")]
 mass = 0.2
 physics_material_override = SubResource("PhysicsMaterial_5jvje")
 gravity_scale = 0.9
-sprite = ExtResource("2_sjq4u")
+sprite = ExtResource("2_uk3f8")
 cook_time = 15.0
-cook_result = ExtResource("3_1y77q")
+cook_result = ExtResource("3_x0fij")
 
 [node name="VisibleOnScreenNotifier2D" parent="." index="0"]
 position = Vector2(-25, 0)
@@ -23,7 +23,7 @@ scale = Vector2(18, 18.1)
 [node name="Patty2" type="Sprite2D" parent="." index="1"]
 position = Vector2(-24, 3)
 scale = Vector2(0.65, 0.349)
-texture = ExtResource("2_sjq4u")
+texture = ExtResource("2_uk3f8")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
 position = Vector2(0, 1)

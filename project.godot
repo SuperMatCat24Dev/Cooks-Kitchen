@@ -20,7 +20,6 @@ config/icon="res://icon.svg"
 Events="*res://Scripts/Events.gd"
 Hud="*res://Scenes/UI/hud.tscn"
 Global="*res://Scripts/Global.gd"
-InventoryManager="*res://addons/inventory_editor/InventoryManager.gd"
 
 [display]
 
