@@ -26,6 +26,7 @@ friction = 0.68
 size = Vector2(538, 501)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(956, 537)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_bit8x")
@@ -35,10 +36,10 @@ anchors_preset = -1
 anchor_top = 0.797
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -963.0
-offset_top = -546.76
-offset_right = -963.0
-offset_bottom = -547.0
+offset_left = -7.0
+offset_top = -9.76001
+offset_right = -7.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 3
@@ -99,6 +100,22 @@ stretch_mode = 5
 script = ExtResource("4_jfuoq")
 ingredient = ExtResource("13_5n2ir")
 
+[node name="Left" type="Button" parent="CanvasLayer"]
+offset_left = 21.0
+offset_top = 625.0
+offset_right = 110.0
+offset_bottom = 730.0
+theme_override_font_sizes/font_size = 64
+text = "<"
+
+[node name="Right" type="Button" parent="CanvasLayer"]
+offset_left = 1802.0
+offset_top = 640.0
+offset_right = 1891.0
+offset_bottom = 745.0
+theme_override_font_sizes/font_size = 64
+text = ">"
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-377, -123)
 physics_material_override = SubResource("PhysicsMaterial_bif34")
@@ -113,14 +130,14 @@ position = Vector2(389, 542.5)
 shape = SubResource("RectangleShape2D_qf8ei")
 
 [node name="CustomerBase" parent="." instance=ExtResource("16_ypdod")]
-position = Vector2(410, 107)
+position = Vector2(419, 112)
 
 [node name="CookAreaBase" parent="." instance=ExtResource("17_b6oqa")]
-position = Vector2(-776, 89)
+position = Vector2(1393, 270)
 script = null
 
 [node name="CookAreaBase2" parent="." instance=ExtResource("17_b6oqa")]
-position = Vector2(-432, 89)
+position = Vector2(1921, 262)
 script = null
 
 [node name="RoomCamera" type="Node2D" parent="."]
@@ -128,3 +145,6 @@ script = ExtResource("16_oki27")
 
 [node name="Camera2D" type="Camera2D" parent="RoomCamera"]
 position_smoothing_enabled = true
+
+[connection signal="pressed" from="CanvasLayer/Left" to="CanvasLayer" method="_on_left_pressed"]
+[connection signal="pressed" from="CanvasLayer/Right" to="CanvasLayer" method="_on_right_pressed"]
