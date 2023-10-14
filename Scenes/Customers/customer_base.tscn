@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1c3poq2w6dec"]
+[gd_scene load_steps=6 format=3 uid="uid://d1c3poq2w6dec"]
 
 [ext_resource type="Script" path="res://Scenes/Customers/customer_base.gd" id="1_0w4vu"]
 [ext_resource type="Texture2D" uid="uid://bnjpdssk1fnc4" path="res://assets/Fingore.png" id="2_ma4cv"]
@@ -7,7 +7,11 @@
 [sub_resource type="LabelSettings" id="LabelSettings_tqnv7"]
 font_size = 48
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6k82"]
+size = Vector2(1092, 1039)
+
 [node name="CustomerBase" type="Node2D"]
+position = Vector2(1384, 654)
 script = ExtResource("1_0w4vu")
 
 [node name="Panel" type="Panel" parent="."]
@@ -67,3 +71,11 @@ text = "0"
 label_settings = SubResource("LabelSettings_tqnv7")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-413, -90.5)
+shape = SubResource("RectangleShape2D_g6k82")

@@ -10,9 +10,6 @@ max_contacts_reported = 10
 contact_monitor = true
 script = ExtResource("1_c6nmx")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-scale = Vector2(3.4, 3.5)
-
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_left = -95.0
 offset_top = 54.0

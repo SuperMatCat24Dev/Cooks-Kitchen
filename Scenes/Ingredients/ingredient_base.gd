@@ -25,7 +25,6 @@ func _integrate_forces(state):
 
 func _ready() -> void:
 	$ProgressBar.visible = false
-	$VisibleOnScreenNotifier2D.screen_exited.connect(_screen_exited)
 	$ProgressBar.set_max(cook_time)
 
 func _process(delta: float) -> void:
@@ -33,6 +32,11 @@ func _process(delta: float) -> void:
 	$ProgressBar.set_value(time_left)
 	
 	if time_left <= 0: finished_cooking()
+	
+	if global_position.y >= 2000:
+		Events.food_fell.emit()
+		Events.food_array.erase(self)
+		queue_free()
 	
 	if not Input.is_action_pressed("mouse_down"):
 		hold = false
@@ -47,11 +51,6 @@ func finished_cooking():
 	get_parent().add_child(ins)
 	ins.global_position = global_position
 	ins.hold = false
-	queue_free()
-
-func _screen_exited() -> void:
-	Events.food_fell.emit()
-	Events.food_array.erase(self)
 	queue_free()
 
 func _on_body_entered(body: Node) -> void:

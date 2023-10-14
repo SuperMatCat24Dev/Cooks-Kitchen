@@ -58,7 +58,7 @@ func list_files_in_directory(path):
 	return files
 
 func clear_ingredients():
-	for children in get_tree().current_scene.get_children():
+	for children in $Area2D.get_overlapping_bodies():
 		if children is Ingredient:
 			children.queue_free()
 
